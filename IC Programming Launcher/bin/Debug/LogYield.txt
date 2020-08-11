@@ -1,0 +1,2 @@
+Date#BadgeID#BlankPart#ProgramPart#SKID#PASS#FAIL
+7/21/2020 8:14:34 PM#b11498#1#2#3#0#0

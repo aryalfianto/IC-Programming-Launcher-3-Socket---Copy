@@ -1,0 +1,2 @@
+1|2|00000002|2|BLUE|C:\Program Files (x86)\Hi-Lo\ALL-100\XAUPD78X.exe
+2|3|02DCFDB9|1|SILVER|C:\Program Files (x86)\Hi-Lo\ALL-100\XAUPD78X.exe
