@@ -28,12 +28,10 @@ namespace IC_Programming_Launcher
             this.guna2TextBox2.Text = "Ready";
             this.guna2TextBox6.Text = "Ready";
         }
-
+        
         string jamlocal2;
         string[] pemisah2;
         string url;
-        IntPtr Windowyield,buttonx,close,auto,unlock,reset;
-        IntPtr satu,dua,tiga,empat,lima,enam,tujuh,delapan,sembilan;
         int tx=0;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -117,16 +115,13 @@ namespace IC_Programming_Launcher
             }
             
         }
-
         int kedip = 0;
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern bool SetWindowText(IntPtr hWnd, string txt);
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
             {
-                ShowWindow(close, 0);
-                ShowWindow(buttonx, 0);
-                ShowWindow(reset, 0);
-                ShowWindow(unlock, 0);
             }
             catch
             { }
@@ -143,8 +138,6 @@ namespace IC_Programming_Launcher
                 kedip++;
             }
 
-            ShowWindow(close, 0);
-
             int az = 0;
 
             var windows = FindWindowsWithText("Auto");
@@ -154,57 +147,21 @@ namespace IC_Programming_Launcher
                 if (az == 1)
                 {
                     var allChildWindows = new WindowHandleInfo(x).GetAllChildHandles();
-                    int ax = 0;
-                    foreach (IntPtr lq in allChildWindows)
+                    for (int a = 0; a < allChildWindows.Count; a++)
                     {
-                        if(ax==14)
+                        try
                         {
-                            Windowyield = lq;
+                            SetWindowText(allChildWindows[a], Convert.ToString(a));
                         }
-                        GetControlText(lq);
-                        
-                        ax++;
-                    }
-                    string baca = GetControlText(buttonx);
-                    string baca1 = GetControlText(close);
-                    
-                    
-                    if (gunaLabel3.BackColor != Color.Green)
-                    {
-                        gunaLabel3.BackColor = Color.Red;
+                        catch { }
                     }
                 }
             }
-            var allChildWindowsyiel = new WindowHandleInfo(Windowyield).GetAllChildHandles();
-            foreach (IntPtr lq in allChildWindowsyiel)
-            {
-                GetControlText(lq);
-            }
+            
             
             try
             {
-                //-------------------------------------------------------
-                // 3 Programming adapter Test
-                string satu1 = GetControlText(satu);// adapter number
-                string dua2 = GetControlText(dua);// Ok adapter 0
-                string tiga3 = GetControlText(tiga);// Ok adapter 1
-                string empat4 = GetControlText(empat);//Ok adapter 2
-                string lima5 = GetControlText(lima);// Total OK
-                string enam6 = GetControlText(enam);// NG adapter 0
-                string tujuh7 = GetControlText(tujuh);// NG adapter 1
-                string delapan8 = GetControlText(delapan);// NG adapter 2
-                string sembilan9 = GetControlText(sembilan);// Total NG
-
-                //textBox1.Text = satu1;
-                textBox2.Text = dua2;
-                textBox3.Text = tiga3;
-                textBox4.Text = empat4;
-                textBox5.Text = lima5;
-                textBox6.Text = enam6;
-                textBox7.Text = tujuh7;
-                textBox8.Text = delapan8;
-                textBox9.Text = sembilan9;
-
+   
                 ///-------------------------------------------------------
                 try
                 {
@@ -227,7 +184,7 @@ namespace IC_Programming_Launcher
 
             }
 
-        }   
+        } 
 
         [DllImport("user32.dll")]
         private static extern bool ShowWindow(IntPtr hwnd, int nCmdShow);
@@ -317,71 +274,7 @@ namespace IC_Programming_Launcher
             StringBuilder title = new StringBuilder(titleSize + 1);
 
             SendMessage(hWnd, (int)WM_GETTEXT, title.Capacity, title);
-            
-            string ggz = Convert.ToString(title);
-            
-            Form3 fm3 = (Form3)Application.OpenForms["Form3"];
-            if (ggz.Contains("Unlock"))
-            {
-                unlock = hWnd;
-            }
-            if (ggz.Contains("Reset"))
-            {
-                reset = hWnd;
-            }
-            if (ggz.Contains("Run"))
-            {
-                buttonx = hWnd;
-            }
-            if (ggz.Contains("Close"))
-            {
-                close = hWnd;
-            }
-            if (ggz == fm3.Checksum)
-            {
-                gunaLabel3.BackColor = Color.Green;
-            }
-            if (ggz == "0") /// 3 adapter programming
-            {
-                string alamat = Convert.ToString(hWnd);               
-                if(tx == 0)
-                {
-                    satu = hWnd;//no adapter
-                }
-                if(tx == 1)
-                {
-                    dua = hWnd;//pass
-                }
-                if (tx == 2)
-                {
-                    tiga = hWnd;//pass
-                }
-                if (tx == 3)
-                {
-                    empat = hWnd;//fail
-                }
-                if (tx == 4)
-                {
-                    lima = hWnd;//fail
-                }
-                if (tx == 5)
-                {
-                    enam = hWnd;//fail
-                }
-                if (tx == 6)
-                {
-                    tujuh = hWnd;//fail
-                }
-                if (tx == 7)
-                {
-                    delapan = hWnd;//fail
-                }
-                if (tx == 8)
-                {
-                    sembilan = hWnd;//fail
-                }
-                tx++;
-            }
+
             return title.ToString();
         }
         public class WindowHandleInfo
@@ -553,9 +446,9 @@ namespace IC_Programming_Launcher
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            SendMessage((int)buttonx, BN_CLICKED, 0, IntPtr.Zero);
-            Thread.Sleep(100);
-            SendMessage((int)buttonx, BN_CLICKED, 0, IntPtr.Zero);
+            //SendMessage((int)buttonx, BN_CLICKED, 0, IntPtr.Zero);
+            //Thread.Sleep(100);
+            //SendMessage((int)buttonx, BN_CLICKED, 0, IntPtr.Zero);
             guna2Button3.Enabled = false;
             guna2Button3.BackColor = Color.DimGray;
             guna2TextBox1.FillColor = Color.Gold;
@@ -568,10 +461,10 @@ namespace IC_Programming_Launcher
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (!IsWindow(auto))
-            {
-                SimpanYield();
-            }
+            //if (!IsWindow(auto))
+            //{
+            //    SimpanYield();
+            //}
             Process[] workers = Process.GetProcessesByName("XAHMPU");
             foreach (Process worker in workers)
             {
@@ -586,10 +479,10 @@ namespace IC_Programming_Launcher
                 worker.WaitForExit();
                 worker.Dispose();
             }
-            if (!IsWindow(auto))
-            {
-                Application.Restart();
-            }
+            //if (!IsWindow(auto))
+            //{
+            //    Application.Restart();
+            //}
         }
         private void SimpanYield()
         {
