@@ -124,8 +124,8 @@ namespace IC_Programming_Launcher
             try { Process.Start(url); }
             catch { MessageBox.Show("Aplikasi Gagal Dipanggil"); }
             this.Hide();
-            Form5 fm5 = new Form5();
-            fm5.Show();
+            Form7 fm7 = new Form7();
+            fm7.Show();
             this.Hide();
         }
 

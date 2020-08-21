@@ -24,18 +24,15 @@ namespace IC_Programming_Launcher
         public Form5()
         {
             InitializeComponent();
-            this.guna2TextBox1.Text = "Ready";
-            this.guna2TextBox2.Text = "Ready";
-            this.guna2TextBox6.Text = "Ready";
         }
         
         string jamlocal2;
         string[] pemisah2;
         string url;
-        int tx=0;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-        
+        List <IntPtr> allChildWindows;
+        IntPtr socket1, socket2, socket3, socket4, socket5, socket6, socket7, socket8 , PASS, FAIL, RUN, CLOSE, RESET;
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -50,9 +47,93 @@ namespace IC_Programming_Launcher
             }
         }
 
-  
+        //Import the SetForeground API to activate it
+        [DllImport("User32.dll", EntryPoint = "SetForegroundWindow")]
+        private static extern IntPtr SetForegroundWindowNative(IntPtr hWnd);
+        public IntPtr SetForegroundWindow(IntPtr hWnd)
+        {
+            return SetForegroundWindowNative(hWnd);
+        }
+
         private void Form5_Load(object sender, EventArgs e)
         {
+            Form7 fm7 = (Form7)Application.OpenForms["Form7"];
+            bool socket1 = fm7.socket1;
+            bool socket2 = fm7.socket2;
+            bool socket3 = fm7.socket3;
+            bool socket4 = fm7.socket4;
+            bool socket5 = fm7.socket5;
+            bool socket6 = fm7.socket6;
+            bool socket7 = fm7.socket7;
+            bool socket8 = fm7.socket8;
+
+            if(socket1==true)
+            {
+                guna2TextBox1.Visible = true;
+            }
+            else
+            {
+                guna2TextBox1.Visible = false;
+            }
+
+            if (socket2 == true)
+            {
+                guna2TextBox2.Visible = true;
+            }
+            else
+            {
+                guna2TextBox2.Visible = false;
+            }
+
+            if (socket3 == true)
+            {
+                guna2TextBox6.Visible = true;
+            }
+            else
+            {
+                guna2TextBox6.Visible = false;
+            }
+            if (socket4 == true)
+            {
+                guna2TextBox7.Visible = true;
+            }
+            else
+            {
+                guna2TextBox7.Visible = false;
+            }
+            if (socket5 == true)
+            {
+                guna2TextBox11.Visible = true;
+            }
+            else
+            {
+                guna2TextBox11.Visible = false;
+            }
+            if (socket6 == true)
+            {
+                guna2TextBox10.Visible = true;
+            }
+            else
+            {
+                guna2TextBox10.Visible = false;
+            }
+            if (socket7 == true)
+            {
+                guna2TextBox9.Visible = true;
+            }
+            else
+            {
+                guna2TextBox9.Visible = false;
+            }
+            if (socket8 == true)
+            {
+                guna2TextBox8.Visible = true;
+            }
+            else
+            {
+                guna2TextBox8.Visible = false;
+            }
+
             this.Location = new Point(0,(Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             Form3 fm3 = (Form3)Application.OpenForms["Form3"];
             gunaLabel1.Text = "Raw: " + fm3.BlankPart;
@@ -139,30 +220,70 @@ namespace IC_Programming_Launcher
             }
 
             int az = 0;
-
+            
             var windows = FindWindowsWithText("Auto");
             foreach (var x in windows)
             {
+                
                 az++;
                 if (az == 1)
                 {
-                    var allChildWindows = new WindowHandleInfo(x).GetAllChildHandles();
-                    for (int a = 0; a < allChildWindows.Count; a++)
+                    allChildWindows = new WindowHandleInfo(x).GetAllChildHandles();
+                    try
                     {
-                        try
-                        {
-                            SetWindowText(allChildWindows[a], Convert.ToString(a));
-                        }
-                        catch { }
+                        textBox1.Text = GetControlText(allChildWindows[87]);
+                        textBox1.Text = GetControlText(allChildWindows[96]);
+
+                        textBox2.Text = GetControlText(allChildWindows[88]);
+                        textBox2.Text = GetControlText(allChildWindows[97]);
+
+                        textBox3.Text = GetControlText(allChildWindows[89]);
+                        textBox3.Text = GetControlText(allChildWindows[98]);
+
+                        textBox4.Text = GetControlText(allChildWindows[90]);
+                        textBox4.Text = GetControlText(allChildWindows[99]);
+
+                        textBox5.Text = GetControlText(allChildWindows[91]);
+                        textBox5.Text = GetControlText(allChildWindows[100]);
+
+
+                        textBox6.Text = GetControlText(allChildWindows[92]);
+                        textBox6.Text = GetControlText(allChildWindows[101]);
+
+
+                        textBox7.Text = GetControlText(allChildWindows[93]);
+                        textBox7.Text = GetControlText(allChildWindows[102]);
+
+
+                        textBox8.Text = GetControlText(allChildWindows[94]);
+                        textBox8.Text = GetControlText(allChildWindows[103]);
+
+
+                        RUN = allChildWindows[14];
+                        CLOSE = allChildWindows[15];
+                        RESET = allChildWindows[105];
                     }
+                    catch
+                    { }
+                    try
+                    {
+                        textBox9.Text = GetControlText(socket1);
+                        textBox10.Text = GetControlText(socket2);
+                        textBox11.Text = GetControlText(socket3);
+                        textBox12.Text = GetControlText(socket4);
+                        textBox13.Text = GetControlText(socket5);
+                        textBox14.Text = GetControlText(socket6);
+                        textBox15.Text = GetControlText(socket7);
+                        textBox16.Text = GetControlText(socket8);
+                        guna2TextBox4.Text = GetControlText(PASS);
+                        guna2TextBox3.Text = GetControlText(FAIL);
+                    }
+                    catch
+                    { }
                 }
             }
-            
-            
             try
             {
-   
-                ///-------------------------------------------------------
                 try
                 {
                     int pass1 = Convert.ToInt32(guna2TextBox4.Text);
@@ -179,11 +300,9 @@ namespace IC_Programming_Launcher
                 catch
                 { }
             }
-            catch(Exception)
+            catch
             {
-
             }
-
         } 
 
         [DllImport("user32.dll")]
@@ -249,7 +368,7 @@ namespace IC_Programming_Launcher
                 return GetWindowText(wnd).Contains(titleText);
             });
         }
-        ////
+
         [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "SendMessage", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
         public static extern bool SendMessage(IntPtr hWnd, uint Msg, int wParam, StringBuilder lParam);
 
@@ -336,109 +455,7 @@ namespace IC_Programming_Launcher
         {
             SendMessage(hwnd, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
         }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox2.Text != "0" && textBox2.Text != "")
-            {
-                this.guna2TextBox1.Text = "PASS";
-                this.guna2TextBox1.FillColor = Color.Green;
-                trigger++;
-                if (trigger == 3)
-                {
-                    guna2Button3.Enabled = true;
-                    guna2Button3.BackColor = Flex;
-                    trigger = 0;
-                }
-            }   
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox3.Text != "0" && textBox3.Text != "")
-            {
-                this.guna2TextBox2.Text = "PASS";
-                this.guna2TextBox2.FillColor = Color.Green;
-                trigger++;
-                if (trigger == 3)
-                {
-                    guna2Button3.Enabled = true;
-                    guna2Button3.BackColor = Flex;
-                    trigger = 0;
-                }
-            }
-        }
-        int trigger = 0;
         Color Flex = Color.FromArgb(0, 154, 223);
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox4.Text != "0" && textBox4.Text != "")
-            {
-                this.guna2TextBox6.Text = "PASS";
-                this.guna2TextBox6.FillColor = Color.Green;
-                trigger++;
-                if (trigger == 3)
-                {
-                    guna2Button3.Enabled = true;
-                    guna2Button3.BackColor = Flex;
-                    trigger = 0;
-                }
-            }
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-            guna2TextBox4.Text = textBox5.Text;
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox6.Text != "0" && textBox6.Text != "")
-            {
-                this.guna2TextBox1.Text = "FAIL";
-                this.guna2TextBox1.FillColor = Color.Red;
-                trigger++;
-                if (trigger == 3)
-                {
-                    guna2Button3.Enabled = true;
-                    guna2Button3.BackColor = Flex;
-                    trigger = 0;
-                }
-            }
-        }
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox7.Text != "0" && textBox7.Text != "")
-            {
-                this.guna2TextBox2.Text = "FAIL";
-                this.guna2TextBox2.FillColor = Color.Red;
-                trigger++;
-                if (trigger == 3)
-                {
-                    guna2Button3.Enabled = true;
-                    guna2Button3.BackColor = Flex;
-                    trigger = 0;
-                }
-            }
-        }
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox8.Text != "0" && textBox8.Text != "")
-            {
-                this.guna2TextBox6.Text = "FAIL";
-                this.guna2TextBox6.FillColor = Color.Red;
-                trigger++;
-                if (trigger == 3)
-                {
-                    guna2Button3.Enabled = true;
-                    guna2Button3.BackColor = Flex;
-                    trigger = 0;
-                }
-            }
-        }
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-            guna2TextBox3.Text = textBox9.Text;
-        }
 
         private const int BN_CLICKED = 245;
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
@@ -446,17 +463,20 @@ namespace IC_Programming_Launcher
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            //SendMessage((int)buttonx, BN_CLICKED, 0, IntPtr.Zero);
-            //Thread.Sleep(100);
-            //SendMessage((int)buttonx, BN_CLICKED, 0, IntPtr.Zero);
-            guna2Button3.Enabled = false;
+            SendMessage((int)RUN, BN_CLICKED, 0, IntPtr.Zero);
+            Thread.Sleep(100);
+            SendMessage((int)RUN, BN_CLICKED, 0, IntPtr.Zero);
+            //guna2Button3.Enabled = false;
             guna2Button3.BackColor = Color.DimGray;
+
             guna2TextBox1.FillColor = Color.Gold;
-            guna2TextBox1.Text = "Progressing";
             guna2TextBox2.FillColor = Color.Gold;
-            guna2TextBox2.Text = "Progressing";
             guna2TextBox6.FillColor = Color.Gold;
-            guna2TextBox6.Text = "Progressing";
+            guna2TextBox7.FillColor = Color.Gold;
+            guna2TextBox11.FillColor = Color.Gold;
+            guna2TextBox10.FillColor = Color.Gold;
+            guna2TextBox9.FillColor = Color.Gold;
+            guna2TextBox8.FillColor = Color.Gold;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -522,6 +542,175 @@ namespace IC_Programming_Launcher
             string LogLama = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "LogYield.txt");
             string FinalLog = LogLama + Environment.NewLine + LogYield;
             System.IO.File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "LogYield.txt", FinalLog);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[55];
+                socket2 = allChildWindows[56];
+                socket3 = allChildWindows[57];
+                socket4 = allChildWindows[58];
+                socket5 = allChildWindows[112];
+                socket6 = allChildWindows[113];
+                socket7 = allChildWindows[114];
+                socket8 = allChildWindows[115];
+                PASS = allChildWindows[87];
+                FAIL = allChildWindows[96];
+            }
+            catch
+            {
+
+            }
+            
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[59];
+                socket2 = allChildWindows[60];
+                socket3 = allChildWindows[61];
+                socket4 = allChildWindows[62];
+                socket5 = allChildWindows[116];
+                socket6 = allChildWindows[117];
+                socket7 = allChildWindows[118];
+                socket8 = allChildWindows[119];
+                PASS = allChildWindows[88];
+                FAIL = allChildWindows[97];
+            }
+            catch
+            {
+
+            }
+            
+        }
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[63];
+                socket2 = allChildWindows[64];
+                socket3 = allChildWindows[65];
+                socket4 = allChildWindows[66];
+                socket5 = allChildWindows[120];
+                socket6 = allChildWindows[121];
+                socket7 = allChildWindows[122];
+                socket8 = allChildWindows[123];
+                PASS = allChildWindows[89];
+                FAIL = allChildWindows[98];
+            }
+            catch
+            {
+
+            }
+            
+        }
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[67];
+                socket2 = allChildWindows[68];
+                socket3 = allChildWindows[69];
+                socket4 = allChildWindows[70];
+                socket5 = allChildWindows[124];
+                socket6 = allChildWindows[125];
+                socket7 = allChildWindows[126];
+                socket8 = allChildWindows[127];
+                PASS = allChildWindows[90];
+                FAIL = allChildWindows[99];
+            }
+            catch
+            {
+
+            }
+            
+        }
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[71];
+                socket2 = allChildWindows[70];
+                socket3 = allChildWindows[73];
+                socket4 = allChildWindows[74];
+                socket5 = allChildWindows[128];
+                socket6 = allChildWindows[129];
+                socket7 = allChildWindows[130];
+                socket8 = allChildWindows[131];
+                PASS = allChildWindows[91];
+                FAIL = allChildWindows[100];
+            }
+            catch
+            {
+
+            }
+            
+        }
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[75];
+                socket2 = allChildWindows[76];
+                socket3 = allChildWindows[77];
+                socket4 = allChildWindows[78];
+                socket5 = allChildWindows[132];
+                socket6 = allChildWindows[133];
+                socket7 = allChildWindows[134];
+                socket8 = allChildWindows[135];
+                PASS = allChildWindows[92];
+                FAIL = allChildWindows[101];
+            }
+            catch
+            {
+
+            }
+            
+        }
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[79];
+                socket2 = allChildWindows[80];
+                socket3 = allChildWindows[81];
+                socket4 = allChildWindows[82];
+                socket5 = allChildWindows[136];
+                socket6 = allChildWindows[137];
+                socket7 = allChildWindows[138];
+                socket8 = allChildWindows[139];
+                PASS = allChildWindows[93];
+                FAIL = allChildWindows[102];
+            }
+            catch
+            {
+
+            }
+            
+        }
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                socket1 = allChildWindows[83];
+                socket2 = allChildWindows[84];
+                socket3 = allChildWindows[85];
+                socket4 = allChildWindows[86];
+                socket5 = allChildWindows[140];
+                socket6 = allChildWindows[141];
+                socket7 = allChildWindows[142];
+                socket8 = allChildWindows[143];
+                PASS = allChildWindows[94];
+                FAIL = allChildWindows[103];
+            }
+            catch
+            {
+
+            }
+            
         }
     }
 }
