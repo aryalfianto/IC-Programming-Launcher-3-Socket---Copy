@@ -17,7 +17,7 @@ namespace IC_Programming_Launcher
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
         }
     }
 }

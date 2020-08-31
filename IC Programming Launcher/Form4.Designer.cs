@@ -60,11 +60,11 @@
             this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 179);
+            this.guna2Button1.Location = new System.Drawing.Point(12, 166);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(114, 38);
+            this.guna2Button1.Size = new System.Drawing.Size(105, 38);
             this.guna2Button1.TabIndex = 28;
             this.guna2Button1.Text = "OK";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -79,11 +79,11 @@
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(146, 179);
+            this.guna2Button2.Location = new System.Drawing.Point(154, 166);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(114, 38);
+            this.guna2Button2.Size = new System.Drawing.Size(105, 38);
             this.guna2Button2.TabIndex = 29;
             this.guna2Button2.Text = "Close";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -112,7 +112,7 @@
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(17, 54);
+            this.gunaLabel1.Location = new System.Drawing.Point(17, 41);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(60, 15);
             this.gunaLabel1.TabIndex = 62;
@@ -124,7 +124,7 @@
             this.guna2CircleButton3.ErrorImage = null;
             this.guna2CircleButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
             this.guna2CircleButton3.InitialImage = null;
-            this.guna2CircleButton3.Location = new System.Drawing.Point(215, 143);
+            this.guna2CircleButton3.Location = new System.Drawing.Point(215, 130);
             this.guna2CircleButton3.Name = "guna2CircleButton3";
             this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton3.ShadowDecoration.Parent = this.guna2CircleButton3;
@@ -138,7 +138,7 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
-            this.gunaLabel2.Location = new System.Drawing.Point(17, 74);
+            this.gunaLabel2.Location = new System.Drawing.Point(17, 61);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(62, 15);
             this.gunaLabel2.TabIndex = 63;
@@ -150,7 +150,7 @@
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(17, 114);
+            this.gunaLabel3.Location = new System.Drawing.Point(17, 101);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(69, 15);
             this.gunaLabel3.TabIndex = 64;
@@ -162,7 +162,7 @@
             this.gunaLabel6.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
-            this.gunaLabel6.Location = new System.Drawing.Point(17, 94);
+            this.gunaLabel6.Location = new System.Drawing.Point(17, 81);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(36, 15);
             this.gunaLabel6.TabIndex = 67;
@@ -174,7 +174,7 @@
             this.gunaLabel4.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
-            this.gunaLabel4.Location = new System.Drawing.Point(17, 134);
+            this.gunaLabel4.Location = new System.Drawing.Point(17, 121);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(51, 15);
             this.gunaLabel4.TabIndex = 65;
@@ -186,7 +186,7 @@
             this.gunaLabel5.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
-            this.gunaLabel5.Location = new System.Drawing.Point(17, 154);
+            this.gunaLabel5.Location = new System.Drawing.Point(17, 141);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(42, 15);
             this.gunaLabel5.TabIndex = 66;
@@ -196,7 +196,7 @@
             // 
             this.guna2CircleButton4.BackColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(223)))));
-            this.guna2CircleButton4.Location = new System.Drawing.Point(228, 143);
+            this.guna2CircleButton4.Location = new System.Drawing.Point(228, 130);
             this.guna2CircleButton4.Name = "guna2CircleButton4";
             this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton4.ShadowDecoration.Parent = this.guna2CircleButton4;
@@ -220,7 +220,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::IC_Programming_Launcher.Properties.Resources.icons8_electronics_64px;
-            this.pictureBox2.Location = new System.Drawing.Point(184, 111);
+            this.pictureBox2.Location = new System.Drawing.Point(184, 98);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(82, 66);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +234,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::IC_Programming_Launcher.Properties.Resources._3300284;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(273, 223);
+            this.ClientSize = new System.Drawing.Size(266, 209);
             this.Controls.Add(this.guna2CircleButton4);
             this.Controls.Add(this.guna2CircleButton3);
             this.Controls.Add(this.pictureBox2);

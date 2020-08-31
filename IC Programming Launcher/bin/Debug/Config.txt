@@ -1,2 +1,1 @@
-1|2|00000002|2|BLUE|C:\Program Files (x86)\Hi-Lo\ALL-100\XAUPD78X.exe
-2|3|02DCFDB9|1|SILVER|C:\Program Files (x86)\Hi-Lo\ALL-100\XAUPD78X.exe
+1|2|99CF/01FE0000|2|BLUE|D:\Indesit\Indesit job\07 Bellatrix\01 Bellatrix_U7_W10618837_PR020000_FVT_yellow.g20

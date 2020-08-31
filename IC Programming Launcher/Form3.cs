@@ -84,9 +84,8 @@ namespace IC_Programming_Launcher
                     }
                     catch
                     {
-
+                        // ignored
                     }
-
                 }
                 if (open != true)
                 {
@@ -109,13 +108,10 @@ namespace IC_Programming_Launcher
                 this.guna2TextBox1.Focus();
             }
 
-            if (open == true)
-            {
-
-                Form4 fm4 = new Form4();
-                fm4.Show();
-                this.Hide();
-            }
+            if (open != true) return;
+            Form4 fm4 = new Form4();
+            fm4.Show();
+            this.Hide();
         }     
     }
 }

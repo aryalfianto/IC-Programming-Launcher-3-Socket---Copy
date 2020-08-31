@@ -35,53 +35,48 @@ namespace IC_Programming_Launcher
             gunaLabel4.Text = "Dotting : " + fm3.Dotting;
             gunaLabel5.Text = "Color : " + fm3.Color;
             gunaLabel6.Text = "SKID : " + fm3.SKID;
-            string qtydot = fm3.Dotting;
+            var qtydot = fm3.Dotting;
             url = fm3.Link;
-            if (fm3.Color == "GREEN")
+            switch (fm3.Color)
             {
-                guna2CircleButton3.FillColor = Color.Green;
-                guna2CircleButton4.FillColor = Color.Green;
+                case "GREEN":
+                    guna2CircleButton3.FillColor = Color.Green;
+                    guna2CircleButton4.FillColor = Color.Green;
+                    break;
+                case "ORANGE":
+                    guna2CircleButton3.FillColor = Color.Orange;
+                    guna2CircleButton4.FillColor = Color.Orange;
+                    break;
+                case "SILVER":
+                    guna2CircleButton3.FillColor = Color.Silver;
+                    guna2CircleButton4.FillColor = Color.Silver;
+                    break;
+                case "WHITE":
+                    guna2CircleButton3.FillColor = Color.White;
+                    guna2CircleButton4.FillColor = Color.White;
+                    break;
+                case "RED":
+                    guna2CircleButton3.FillColor = Color.Red;
+                    guna2CircleButton4.FillColor = Color.Red;
+                    break;
+                case "BLUE":
+                    guna2CircleButton3.FillColor = Color.Blue;
+                    guna2CircleButton4.FillColor = Color.Blue;
+                    break;
+                case "YELLOW":
+                    guna2CircleButton3.FillColor = Color.Yellow;
+                    guna2CircleButton4.FillColor = Color.Yellow;
+                    break;
+                case "PINK":
+                    guna2CircleButton3.FillColor = Color.Pink;
+                    guna2CircleButton4.FillColor = Color.Pink;
+                    break;
+                case "PURPLE":
+                    guna2CircleButton3.FillColor = Color.Purple;
+                    guna2CircleButton4.FillColor = Color.Purple;
+                    break;
             }
-            if (fm3.Color == "ORANGE")
-            {
-                guna2CircleButton3.FillColor = Color.Orange;
-                guna2CircleButton4.FillColor = Color.Orange;
-            }
-            if (fm3.Color == "SILVER")
-            {
-                guna2CircleButton3.FillColor = Color.Silver;
-                guna2CircleButton4.FillColor = Color.Silver;
-            }
-            if (fm3.Color == "WHITE")
-            {
-                guna2CircleButton3.FillColor = Color.White;
-                guna2CircleButton4.FillColor = Color.White;
-            }
-            if (fm3.Color == "RED")
-            {
-                guna2CircleButton3.FillColor = Color.Red;
-                guna2CircleButton4.FillColor = Color.Red;
-            }
-            if (fm3.Color == "BLUE")
-            {
-                guna2CircleButton3.FillColor = Color.Blue;
-                guna2CircleButton4.FillColor = Color.Blue;
-            }
-            if (fm3.Color == "YELLOW")
-            {
-                guna2CircleButton3.FillColor = Color.Yellow;
-                guna2CircleButton4.FillColor = Color.Yellow;
-            }
-            if (fm3.Color == "PINK")
-            {
-                guna2CircleButton3.FillColor = Color.Pink;
-                guna2CircleButton4.FillColor = Color.Pink;
-            }
-            if (fm3.Color == "PURPLE")
-            {
-                guna2CircleButton3.FillColor = Color.Purple;
-                guna2CircleButton4.FillColor = Color.Purple;
-            }
+
             if (qtydot == "1")
             {
                 guna2CircleButton3.FillColor = Color.Transparent;
@@ -94,7 +89,7 @@ namespace IC_Programming_Launcher
             {
                 using (WebClient client = new WebClient())
                 {
-                    string ServerTime = client.DownloadString("http://10.201.192.20/AutoParser/SCH/ICT/GetServerDateTime.aspx?txtFFDB=FF2810_SCH");
+                    var ServerTime = client.DownloadString("http://10.201.192.20/AutoParser/SCH/ICT/GetServerDateTime.aspx?txtFFDB=FF2810_SCH");
                     pemisah = ServerTime.Split(';');
                     jam = true;
                 }
@@ -104,13 +99,14 @@ namespace IC_Programming_Launcher
                 jamlocal = DateTime.Now.ToString("M/d/yyyy h:mm:ss tt");
                 jam = false;
             }
-            if (jam == true)
+            switch (jam)
             {
-                date = pemisah[1];
-            }
-            else
-            {
-                date = jamlocal;
+                case true:
+                    date = pemisah[1];
+                    break;
+                default:
+                    date = jamlocal;
+                    break;
             }
             
             string LogConvert = date + "#" + fm1.BadgeID + "#" + fm3.BlankPart + "#" + fm3.ProgramPart+ "#" + fm3.SKID;
