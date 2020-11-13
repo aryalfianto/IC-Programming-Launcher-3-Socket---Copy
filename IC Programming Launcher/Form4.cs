@@ -99,14 +99,21 @@ namespace IC_Programming_Launcher
                 jamlocal = DateTime.Now.ToString("M/d/yyyy h:mm:ss tt");
                 jam = false;
             }
-            switch (jam)
+            try
             {
-                case true:
+                if(jam==true)
+                {
                     date = pemisah[1];
-                    break;
-                default:
+                }
+                else
+                {
                     date = jamlocal;
-                    break;
+                }
+                
+            }
+            catch
+            {
+                
             }
             
             string LogConvert = date + "#" + fm1.BadgeID + "#" + fm3.BlankPart + "#" + fm3.ProgramPart+ "#" + fm3.SKID;

@@ -103,7 +103,7 @@ namespace IC_Programming_Launcher
             this.Location = new Point(0,(Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             Form3 fm3 = (Form3)Application.OpenForms["Form3"];
             gunaLabel1.Text = "Raw: " + fm3.BlankPart;
-            gunaLabel2.Text = "Pro: " + fm3.ProgramPart;
+            gunaLabel2.Text = "Pro:" + fm3.ProgramPart;
             gunaLabel3.Text = "CRC/Buffer: " + fm3.Checksum;
             gunaLabel4.Text = "Dotting: " + fm3.Dotting;
             gunaLabel5.Text = "Color: " + fm3.Color;
@@ -206,6 +206,11 @@ namespace IC_Programming_Launcher
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
+        {
+            Check();
+        } 
+
+        private void Check()
         {
             if (kedip % 2 == 0)
             {
@@ -377,7 +382,7 @@ namespace IC_Programming_Launcher
                         break;
                 }
             }
-        } 
+        }
 
         [DllImport("user32.dll")]
         private static extern bool ShowWindow(IntPtr hwnd, int nCmdShow);
@@ -555,15 +560,29 @@ namespace IC_Programming_Launcher
             Thread.Sleep(100);
             SendMessage((int)CLOSE, BN_CLICKED, 0, IntPtr.Zero);
            
-            Process[] workers = Process.GetProcessesByName("XAHMPU");
+            Process[] workers = Process.GetProcessesByName("SASTM32");
             foreach (Process worker in workers)
             {
                 worker.Kill();
                 worker.WaitForExit();
                 worker.Dispose();
             }
-            var workers1 = Process.GetProcessesByName("XAUPD78X");
+            var workers1 = Process.GetProcessesByName("SAHMPU");
             foreach (Process worker in workers1)
+            {
+                worker.Kill();
+                worker.WaitForExit();
+                worker.Dispose();
+            }
+            var workers2 = Process.GetProcessesByName("SAMCF");
+            foreach (Process worker in workers2)
+            {
+                worker.Kill();
+                worker.WaitForExit();
+                worker.Dispose();
+            }
+            var workers3 = Process.GetProcessesByName("SAMKL");
+            foreach (Process worker in workers3)
             {
                 worker.Kill();
                 worker.WaitForExit();
@@ -783,6 +802,5 @@ namespace IC_Programming_Launcher
             guna2Button3.Enabled = true;
             guna2Button3.BackColor = Flex;
         }
-
     }
 }

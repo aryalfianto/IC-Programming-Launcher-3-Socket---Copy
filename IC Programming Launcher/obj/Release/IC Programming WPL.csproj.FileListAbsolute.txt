@@ -1,0 +1,11 @@
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\bin\Release\IC Programming Launcher.exe.config
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC Programming WPL.csprojResolveAssemblyReference.cache
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Form1.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Form2.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Form3.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Form4.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Form5.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Form6.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Form7.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC_Programming_Launcher.Properties.Resources.resources
+D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Release\IC Programming WPL.csproj.GenerateResource.Cache

@@ -58,7 +58,6 @@
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -75,6 +74,8 @@
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CircleButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CircleButton3)).BeginInit();
@@ -90,7 +91,7 @@
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel6.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel6.Location = new System.Drawing.Point(-1, 82);
+            this.gunaLabel6.Location = new System.Drawing.Point(-1, 104);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(33, 15);
             this.gunaLabel6.TabIndex = 41;
@@ -101,9 +102,9 @@
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel3.Location = new System.Drawing.Point(0, 59);
+            this.gunaLabel3.Location = new System.Drawing.Point(0, 77);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(193, 20);
+            this.gunaLabel3.Size = new System.Drawing.Size(193, 14);
             this.gunaLabel3.TabIndex = 38;
             this.gunaLabel3.Text = "CRC#Buffer:";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,7 +114,8 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(-1, 41);
+            this.gunaLabel2.Location = new System.Drawing.Point(0, 47);
+            this.gunaLabel2.MaximumSize = new System.Drawing.Size(194, 30);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(28, 15);
             this.gunaLabel2.TabIndex = 37;
@@ -124,7 +126,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(-1, 23);
+            this.gunaLabel1.Location = new System.Drawing.Point(-1, 19);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(33, 15);
             this.gunaLabel1.TabIndex = 36;
@@ -152,7 +154,7 @@
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 130);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(196, 142);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(196, 180);
             this.guna2GroupBox1.TabIndex = 45;
             this.guna2GroupBox1.Text = "Programming Information";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -163,7 +165,7 @@
             this.guna2CircleButton4.BackColor = System.Drawing.Color.Black;
             this.guna2CircleButton4.ErrorImage = null;
             this.guna2CircleButton4.FillColor = System.Drawing.Color.Black;
-            this.guna2CircleButton4.Location = new System.Drawing.Point(165, 111);
+            this.guna2CircleButton4.Location = new System.Drawing.Point(165, 148);
             this.guna2CircleButton4.Name = "guna2CircleButton4";
             this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton4.ShadowDecoration.Parent = this.guna2CircleButton4;
@@ -177,7 +179,7 @@
             this.guna2CircleButton3.ErrorImage = null;
             this.guna2CircleButton3.FillColor = System.Drawing.Color.Black;
             this.guna2CircleButton3.InitialImage = null;
-            this.guna2CircleButton3.Location = new System.Drawing.Point(154, 111);
+            this.guna2CircleButton3.Location = new System.Drawing.Point(154, 148);
             this.guna2CircleButton3.Name = "guna2CircleButton3";
             this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton3.ShadowDecoration.Parent = this.guna2CircleButton3;
@@ -190,7 +192,7 @@
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel5.Location = new System.Drawing.Point(-1, 118);
+            this.gunaLabel5.Location = new System.Drawing.Point(-1, 161);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(39, 15);
             this.gunaLabel5.TabIndex = 46;
@@ -201,7 +203,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel4.Location = new System.Drawing.Point(-1, 100);
+            this.gunaLabel4.Location = new System.Drawing.Point(-1, 132);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(31, 15);
             this.gunaLabel4.TabIndex = 45;
@@ -210,9 +212,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IC_Programming_Launcher.Properties.Resources.icons8_electronics_64px1;
-            this.pictureBox2.Location = new System.Drawing.Point(135, 76);
+            this.pictureBox2.Location = new System.Drawing.Point(135, 119);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 65);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 59);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
@@ -357,7 +359,7 @@
             this.guna2GroupBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 272);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 308);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
             this.guna2GroupBox2.Size = new System.Drawing.Size(196, 137);
@@ -621,7 +623,7 @@
             this.guna2GroupBox4.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox4.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox4.Location = new System.Drawing.Point(0, 409);
+            this.guna2GroupBox4.Location = new System.Drawing.Point(0, 445);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
             this.guna2GroupBox4.ShadowDecoration.Parent = this.guna2GroupBox4;
             this.guna2GroupBox4.Size = new System.Drawing.Size(196, 107);
@@ -672,18 +674,6 @@
             this.guna2Button3.TabIndex = 56;
             this.guna2Button3.Text = "RUN";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::IC_Programming_Launcher.Properties.Resources.flex;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
@@ -805,13 +795,35 @@
             this.textBox16.Size = new System.Drawing.Size(58, 23);
             this.textBox16.TabIndex = 71;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(211, 272);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::IC_Programming_Launcher.Properties.Resources.flex;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(196, 516);
+            this.ClientSize = new System.Drawing.Size(196, 552);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox11);
@@ -904,5 +916,6 @@
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Button button1;
     }
 }

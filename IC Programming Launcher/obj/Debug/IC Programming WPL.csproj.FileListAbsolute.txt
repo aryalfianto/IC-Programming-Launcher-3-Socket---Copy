@@ -16,13 +16,10 @@ D:\Desktop Programming\IC Programming Launcher 3 Socket - Copy\IC Programming La
 D:\Desktop Programming\IC Programming Launcher 3 Socket - Copy\IC Programming Launcher\obj\Debug\IC_Programming_Launcher.Form7.resources
 D:\Desktop Programming\IC Programming Launcher 3 Socket - Copy\IC Programming Launcher\obj\Debug\IC Programming WPL.csprojResolveAssemblyReference.cache
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\bin\Debug\IC Programming Launcher.exe.config
-D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\Interop.REMOTEPROXY6432Lib.dll
-D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\IC Programming WPL.csproj.ResolveComReference.cache
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\IC Programming Launcher.exe
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\IC Programming Launcher.pdb
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\bin\Debug\IC Programming Launcher.exe
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\bin\Debug\IC Programming Launcher.pdb
-D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\IC Programming WPL.csprojResolveAssemblyReference.cache
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\IC_Programming_Launcher.Form1.resources
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\IC_Programming_Launcher.Form2.resources
 D:\Desktop Programming\IC Programming Launcher ALL 200  WPL\IC Programming Launcher\obj\Debug\IC_Programming_Launcher.Form3.resources
